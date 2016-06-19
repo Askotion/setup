@@ -20,7 +20,6 @@ apt-get -y dist-upgrade >> log.txt
 apt-get -y install git >> log.txt
 apt-get -y screen git >> log.txt
 
-mkdir ~/git
 git clone https://github.com/Askotion/setup.git /root/git/
 
 sleep 15
