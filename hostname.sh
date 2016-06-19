@@ -10,8 +10,6 @@ fi
 
 echo '@reboot root /home/starter.sh' >> /etc/crontab
 
-# Removing log from last time
-rm log.txt
 
 # Updating and Upgrading Server
 apt-get update >> log.txt
