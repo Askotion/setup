@@ -23,6 +23,8 @@ apt-get -y screen git >> log.txt
 mkdir ~/git
 git clone https://github.com/Askotion/setup.git ~/git/
 
+sleep 5
+
 mv ~/git/setup/kvmsetup.sh /home/kvmsetup.sh
 mv ~/git/setup/starter.sh /home/starter.sh
 mv ~/git/setup/getid.sh /root/getid.sh
