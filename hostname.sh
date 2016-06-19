@@ -17,6 +17,7 @@ rm log.txt
 apt-get update >> log.txt
 apt-get -y upgrade >> log.txt
 apt-get -y install git >> log.txt
+apt-get -y screen git >> log.txt
 
 mkdir ~/git
 git clone https://github.com/Askotion/setup.git ~/git/
