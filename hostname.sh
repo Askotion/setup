@@ -21,14 +21,16 @@ apt-get -y install git >> log.txt
 apt-get -y screen git >> log.txt
 
 mkdir ~/git
-git clone https://github.com/Askotion/setup.git ~/git/
+git clone https://github.com/Askotion/setup.git /root/git/
 
-sleep 5
+sleep 15
 
-mv ~/git/kvmsetup.sh /home/kvmsetup.sh
-mv ~/git/starter.sh /home/starter.sh
-mv ~/git/getid.sh /root/getid.sh
-mv ~/git/setupvm.sh /home/setupvm.sh
+function move () {
+mv /root/git/kvmsetup.sh /home/kvmsetup.sh &&
+mv /root/git/starter.sh /home/starter.sh &&
+mv /root/git/getid.sh /root/getid.sh &&
+mv /root/git/setupvm.sh /home/setupvm.sh
+}
 
 chmod +x /home/kvmsetup.sh
 chmod +x /home/starter.sh
@@ -54,6 +56,9 @@ hostname
 
 # Removing Text File
 rm var.txt
+
+# Executing Funciton
+move
 
 # Rebooting
 reboot
