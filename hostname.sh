@@ -16,6 +16,7 @@ rm log.txt
 # Updating and Upgrading Server
 apt-get update >> log.txt
 apt-get -y upgrade >> log.txt
+apt-get -y dist-upgrade >> log.txt
 apt-get -y install git >> log.txt
 apt-get -y screen git >> log.txt
 
