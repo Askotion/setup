@@ -25,10 +25,10 @@ git clone https://github.com/Askotion/setup.git ~/git/
 
 sleep 5
 
-mv ~/git/setup/kvmsetup.sh /home/kvmsetup.sh
-mv ~/git/setup/starter.sh /home/starter.sh
-mv ~/git/setup/getid.sh /root/getid.sh
-mv ~/git/setup/setupvm.sh /home/setupvm.sh
+mv ~/git/kvmsetup.sh /home/kvmsetup.sh
+mv ~/git/starter.sh /home/starter.sh
+mv ~/git/getid.sh /root/getid.sh
+mv ~/git/setupvm.sh /home/setupvm.sh
 
 chmod +x /home/kvmsetup.sh
 chmod +x /home/starter.sh
