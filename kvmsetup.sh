@@ -46,9 +46,9 @@ adduser `id -un` libvirtd >> $LOG 2>&1
 }
 
 function download() {
-wget -q --user=username --password=download https://master.askoproducts.com/dl/clashauto.qcow2 &&
+wget -q https://master.askoproducts.com/dl/clashauto.qcow2 &&
 mv clashauto.qcow2 /home/clashauto.qcow2 &&
-chmod 777 /home/clashauto.qcow2 >> $LOG 2>&1
+chmod 775 /home/clashauto.qcow2 >> $LOG 2>&1
 }
 
 function import() {
@@ -96,26 +96,6 @@ sleep 2
 
 echo -e "\t# 4) - Starting QemuSetup for Node - #\t"
 verify
-sleep 2
-
-echo -e "\t# 5) - Copying 1. Stack of Images - #\t"
-cp1
-sleep 2
-
-echo -e "\t# 6) - Copying 2. Stack of Images - #\t"
-cp2
-sleep 2
-
-echo -e "\t# 7) - Copying 3. Stack of Images - #\t"
-#cp3
-sleep 2
-
-echo -e "\t# 8) - Copying 4. Stack of Images - #\t"
-#cp4
-sleep 2
-
-echo -e "\t# 9) - Importing 1. Virtual Host - #\t"
-import
 sleep 2
 
 echo -e "\t# 10) - Installting Guestfish pa - #\t"
