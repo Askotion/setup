@@ -14,20 +14,18 @@ echo '@reboot root /home/starter.sh' >> /etc/crontab
 # Updating and Upgrading Server
 apt-get update >> log.txt
 apt-get -y upgrade >> log.txt
-apt-get -y dist-upgrade >> log.txt
-apt-get -y install git >> log.txt
-apt-get -y install screen >> log.txt
+apt-get -y install git screen >> log.txt
 
 # Git clone directory
 git clone https://github.com/Askotion/setup.git /root/git/
 
 sleep 15
 
-function move () {
-mv /root/git/kvmsetup.sh /home/kvmsetup.sh &&
-mv /root/git/starter.sh /home/starter.sh &&
-mv /root/git/getid.sh /root/getid.sh &&
-mv /root/git/setupvm.sh /home/setupvm.sh
+function cp () {
+cp /root/git/kvmsetup.sh /home/kvmsetup.sh &&
+cp /root/git/starter.sh /home/starter.sh &&
+cp /root/git/getid.sh /root/getid.sh &&
+cp /root/git/setupvm.sh /home/setupvm.sh
 }
 
 
@@ -58,7 +56,7 @@ hostname
 rm var.txt
 
 # Executing Function
-move
+cp
 
 # Executing Function
 chmod
