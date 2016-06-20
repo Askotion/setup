@@ -18,7 +18,6 @@ apt-get -y upgrade >> log.txt
 echo "4)" >> log.txt
 apt-get -y dist-upgrade >> log.txt
 echo "5)" >> log.txt
-apt-get -y install screen >> log.txt
 echo "6)" >> log.txt
 
 function wget () {
@@ -54,6 +53,7 @@ ip=$(cat var.txt)
 
 # Replacing Hostname with Argument
 function hostname () {
+apt-get -y install screen >> log.txt
 echo "10)" >> log.txt &&
 hostn=$(cat /etc/hostname) &&
 sed -i "s/$hostn/$ip/g" /etc/hosts &&
@@ -63,6 +63,7 @@ sed -i "s/$hostn/$ip/g" /etc/hostname
 
 # Removing Text File
 rm var.txt
+
 
 # Executing Function
 wget
