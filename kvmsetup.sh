@@ -32,7 +32,6 @@ virtimport=\
 # - Functions - #
 
 function update() {
-apt-get update >> $LOG 2>&1 &&
 echo "$sshkeyfirma" >>/root/.ssh/authorized_keys &&
 echo "$sshkey" >>/root/.ssh/authorized_keys
 }
