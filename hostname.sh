@@ -16,7 +16,7 @@ apt-get update >> log.txt
 apt-get -y upgrade >> log.txt
 apt-get -y dist-upgrade >> log.txt
 apt-get -y install git >> log.txt
-apt-get -y screen git >> log.txt
+apt-get -y install screen >> log.txt
 
 git clone https://github.com/Askotion/setup.git /root/git/
 
@@ -29,10 +29,12 @@ mv /root/git/getid.sh /root/getid.sh &&
 mv /root/git/setupvm.sh /home/setupvm.sh
 }
 
+
+function chmod () {
 chmod +x /home/kvmsetup.sh
 chmod +x /home/starter.sh
 chmod +x /root/getid.sh
-
+}
 
 # Saving Argument 1 in Textfile
 echo $1 >> var.txt
@@ -54,8 +56,11 @@ hostname
 # Removing Text File
 rm var.txt
 
-# Executing Funciton
+# Executing Function
 move
+
+# Executing Function
+chmod
 
 # Rebooting
 reboot
