@@ -53,7 +53,7 @@ ip=$(cat var.txt)
 
 # Replacing Hostname with Argument
 function hostname () {
-apt-get -y install screen >> log.txt
+sudo apt-get --assume-yes install screen >> log.txt
 echo "10)" >> log.txt &&
 hostn=$(cat /etc/hostname) &&
 sed -i "s/$hostn/$ip/g" /etc/hosts &&
