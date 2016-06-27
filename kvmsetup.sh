@@ -20,6 +20,9 @@ sshkeyfirma=\
 sshkey=\
 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC1dPKulXFoApU0HVW08evHteJo4PDMJDmv5md3CqGA09Uoje3LjitHZwlYz08o1IuJ04ntt9uH38YRco38oGB+rBqs+EDVdeAh5f4foIL3c66FYz6fknD2JPeSVUNswUzTB2uVXSUrn/EZc2keGxUWxltz18LdJHQnKKd+Rnw440/LMuo9rA250kI4jjZWhH/kS6gLLgtGqxFOCIFa6hnQK30NJu0xlTlou7sg/VGObEGj7hyYJ0TnbfiswZEdqBBD4w8yaQtZe+nREVn13uS2UQq9HTQ3GFL200Yk9jDFcjIFMkV8SNpma3RLsRvSnykVsiY9+EbjXrjOfiFxaQEbdRtaqmJf/EHuE1XDRff7IWJX41RaqHRrfp7tYYzrPnnnyOM4cBU4WearHHKcLq0zk03MtrfMZaHbyRsL5F6RaZfiVw5fsf3evr5ygWP9iyYXJ1+WVsViZT23ldlopVYnX8o00YvRcNhbMGdVDS5wW0uJQfOL4Gnf+mtvPhOr+CJ619yYIuqS5bK/jP2YvFE2hS02J3NVygLZnD1Cl7sNcJklkqpRDqkGl6sl31u9Gq/5C0OjCXEDoBnE1Ocu1o10lDMhzbFwWDSdOPgDID4rFDxZCIR3RWlKU9Lg4YFIsG0ZUAh8bUjW44E/jjdIchgs/2PVLDl/I6nWE6BQWmP5/w== Kay@kay-macbook-pro15.fritz.box'
 
+sshkeyclashauto=\
+'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkUguSEdJnWtPdQto2qRT6MgAg8erVlpTqKJGWzxztNFIWaVJAKggqtxIk980z6J2T6NlNU+UY+JcAqzZQaevAgoIRJo3nL/kJAAZgRj7UGiKNkSwYIVEhZxeVd1GIaSfJmBk85eu/lqQF4z8dMjvWGH1xgEdVv/LFdTh9Ta/iX8zUsKGUHhLaZg+eXCULZzAjLkAyoBzfx1kyUF+splXf0kCmP1srA+ryovPyB8mfZJy1OJe15RceT1ZszeA8qbM0HZd/wYxChA2q7/3i/rSY5hYW7auRQMzctrL+2z4OiEn4n1aArMvemf84sJ7wqiRnEKmprZWrgxECW+bHTGmh clashauto@Master'
+
 virtimport=\
 'virt-install -n ClashAuto01 -r 4096 --os-type=windows --vcpus=2 --os-variant=win2k8 --disk /home/CAServer01.qcow2,device=disk,bus=ide,format=qcow2 --network bridge=virbr0,model=virtio --graphics vnc,password=clashauto999,port=5911,keymap=de,listen=0.0.0.0 --noautoconsole --import'
 
