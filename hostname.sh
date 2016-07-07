@@ -9,7 +9,7 @@ LOG=/root/setup.log
 
 # Methods
 
-
+clear
 
 function delay()
 {
