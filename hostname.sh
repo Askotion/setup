@@ -122,6 +122,10 @@ sleep 1
 progress 90 "Phase 13      "
 chmod +x /root/getid.sh
 sleep 1
+progress 95 "Phase 14      "
+chmod +x /home/setupvm.sh
+sleep 1
+
 ###
 
 echo '@reboot root /home/starter.sh' >> /etc/crontab
