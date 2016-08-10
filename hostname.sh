@@ -55,7 +55,7 @@ function progress()
 }
 
 
-echo "The task is in progress, please wait a few seconds"
+echo "The tasks are in progress, please wait a few minutes"
 
 progress 10 "Initialize"
 
