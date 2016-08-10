@@ -43,7 +43,7 @@ function verify() {
 adduser `id -un` libvirtd >> $LOG 2>&1
 }
 
-function download() {
+function downloadCA() {
 wget -q https://master.askoproducts.com/dl/clashauto.img &&
 mv clashauto.img /home/clashauto.img &&
 chmod 775 /home/clashauto.img >> $LOG 2>&1
@@ -75,7 +75,7 @@ update
 sleep 2
 
 echo -e "\t# 2) - Download additional files .. - #\t"
-download
+downloadCA
 sleep 2
 
 echo -e "\t# 3) - Starting the KVM installation - #\t"
