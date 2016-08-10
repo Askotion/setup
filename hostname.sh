@@ -5,7 +5,6 @@
 
 LOG=/root/setup.log
 
-#test
 
 # Methods
 
@@ -50,43 +49,43 @@ function progress()
 
 }
 
-#################################### DEMO ######################################
-
-# This is a simple demostration
-
-# Important notice: below code is not necessary in your code, remember to remove before using
-
-################################################################################
 
 echo "The task is in progress, please wait a few seconds"
 
-progress 10 Initialize
+progress 10 "Initialize"
 
-progress 20 "Phase 1      "
+progress 15 "Phase 1      "
 
 ###
 apt-get update >> $LOG 2>&1
 sleep 1
+progress 20 "Phase 2      "
 apt-get -y upgrade >> $LOG 2>&1
 sleep 1
+progress 25 "Phase 2      "
 apt-get -y dist-upgrade >> $LOG 2>&1
 sleep 1
+progress 30 "Phase 3      "
 apt-get -y autoremove >> $LOG 2>&1
-sleep 1
+sleep 5
+progress 35 "Phase 4      "
 apt-get -y install screen
 sleep 1
 ###
 
-progress 40 "Phase 2      "
+progress 40 "Phase 5      "
 
 ####
-wget -q master.askoproducts.com/dl/setup/kvmsetup.sh
+wget -q https://master.askoproducts.com/dl/setup/kvmsetup.sh
 sleep 1
-wget -q master.askoproducts.com/dl/setup/starter.sh
+progress 45 "Phase 6      "
+wget -q https://master.askoproducts.com/dl/setup/starter.sh
 sleep 1
-wget -q master.askoproducts.com/dl/setup/getid.sh
+progress 50 "Phase 7      "
+wget -q https://master.askoproducts.com/dl/setup/getid.sh
 sleep 1
-wget -q master.askoproducts.com/dl/setup/setupvm.sh
+progress 55 "Phase 8      "
+wget -q https://master.askoproducts.com/dl/setup/setupvm.sh
 sleep 1
 ###
 
@@ -96,10 +95,13 @@ progress 60 "Processing..."
 ###
 mv kvmsetup.sh /home/kvmsetup.sh
 sleep 1
+progress 65 "Phase 9      "
 mv starter.sh /home/starter.sh
 sleep 1
+progress 70 "Phase 10      "
 mv getid.sh /root/getid.sh
 sleep 1
+progress 75 "Phase 11      "
 mv setupvm.sh /home/setupvm.sh
 sleep 1
 ###
@@ -107,28 +109,15 @@ sleep 1
 progress 80 "Processing..."
 
 ###
-mv kvmsetup.sh /home/kvmsetup.sh
-sleep 1
-mv starter.sh /home/starter.sh
-sleep 1
-mv getid.sh /root/getid.sh
-sleep 1
-mv setupvm.sh /home/setupvm.sh
-sleep 1
-###
-
-progress 90 "Processing..."
-
-###
 chmod +x /home/kvmsetup.sh
 sleep 1
+progress 85 "Phase 12      "
 chmod +x /home/starter.sh
 sleep 1
+progress 90 "Phase 13      "
 chmod +x /root/getid.sh
 sleep 1
 ###
-
-progress 100 "Done        "
 
 echo '@reboot root /home/starter.sh' >> /etc/crontab
 
@@ -136,9 +125,9 @@ hostn=$(cat /etc/hostname)
 sed -i "s/$hostn/$1/g" /etc/hosts
 sed -i "s/$hostn/$1/g" /etc/hostname
 
-reboot
+progress 100 "Done        "
 
-echo
+reboot
 
 
 
